@@ -30,7 +30,12 @@ To use this script, you'll need:
 
 6. Save the config.py file
 
-7. Open the Cron-Deamon
+7. Open a browser on your local machine and got to the webinterface of your Blockclock micro
+   ```sh
+   http://YOUR-IP-ADDRESS/display
+   ``` 
+
+8. Open the Cron-Deamon
    ```sh
    crontab -e
    ``` 
