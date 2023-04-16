@@ -72,8 +72,14 @@ This script currently supports the following features:
    
 ##Donations
 
-If you like this little fun project please feel free to send some U+2764 &  	U+26A1 	
-    
+If you like this little fun project please feel free to send some ❤️&⚡
+
+onchain: bc1q82ta28j6k4qgygy66hns64sktg46sgjklyek72
+
+LNURL: lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhkzmrfv4hxxun9v96x7u3jx5lv6rfy
+
+Lightning Address: aliencreator25@walletofsatoshi.com
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
