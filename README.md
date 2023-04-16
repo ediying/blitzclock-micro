@@ -34,8 +34,9 @@ To use this script, you'll need:
    ```sh
    http://YOUR-IP-ADDRESS/display
    ``` 
+8. Set your scrren update rate to MANUAL
 
-8. Open the Cron-Deamon
+9. Open the Cron-Deamon
    ```sh
    crontab -e
    ``` 
