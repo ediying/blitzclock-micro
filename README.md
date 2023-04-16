@@ -12,15 +12,15 @@ To use this script, you'll need:
 
 ## Getting Started
 
-1. Open an ssh connection to your raspiblitz
+1. Open an ssh connection to your Raspiblitz
 
 2. Clone the repo to your /home/admin folder
    ```sh
    git clone https://github.com/ediying/blitzclock-micro
    ```
-3. Install NPM packages
+3. Go to the blitzclock-micro folder
    ```sh
-   npm install
+   cd blitzclock-micro
    ```
 4. Enter your API in `config.js`
    ```js
