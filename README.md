@@ -1,13 +1,8 @@
 # blitzclock-micro
 
-Short introduction or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+This is a Python script that connects to your Bitcoin Lightning Network Daemon (LND) and retrieves data about your Lightning channels and balances. It uses that data to update a Blockclock device, which displays the current Bitcoin block height and other relevant information.
 
-You can also add some badges/states next to Project Name, e.g,
-+ [Travis CI](https://travis-ci.org/)
-
-+ Others
-
-## Features or Example
+## Getting Started
 
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
