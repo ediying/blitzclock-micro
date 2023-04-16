@@ -50,7 +50,7 @@ To use this script, you'll need:
    
 11. Save the Cronjob  
 
-
+Please note that the first update might not be correct because the "blitzclock_data.txt" is still empty. After that everything should work as expected.
 If you want to use a custom folder location, macaroon path or light colors you can also change that in the config.py file
    
 
