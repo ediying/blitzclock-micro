@@ -46,6 +46,7 @@ To use this script, you'll need:
    */5 * * * * /usr/bin/python /home/admin/blitzclock-micro/blitzclock.py
    ``` 
    blas
+   
 11. Save the Cronjon  
 
 
