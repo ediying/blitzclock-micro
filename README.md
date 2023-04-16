@@ -80,6 +80,8 @@ LNURL: lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h
 
 Lightning Address: aliencreator25@walletofsatoshi.com
 
+Find me on nostr: npub1ddwsgs3k0cvmzgvyru626wt6kgpvtx6yu8y7xljhxw622dghy08qkls259
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
