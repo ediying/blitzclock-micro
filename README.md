@@ -30,7 +30,14 @@ To use this script, you'll need:
 
 6. Save the config.py file
 
-7.  
+7. Open the Cron-Deamon
+   ```sh
+   crontab -e
+   ``` 
+
+
+
+If you want to use a custom folder location, macaroon path or light colors you can change also change that in the config.py file
    
 
 
