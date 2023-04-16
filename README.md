@@ -66,11 +66,10 @@ This script currently supports the following features:
    
     New routed Transaction: Display the daily earned fee amount (60 sec) with orange light (5 sec).
    
-    New incoming/outgoing onchain transaction (unconfirmed): Display the incoming/outgoing amount (60 sec) with orange light (until transaction is         confirmed)
+    New unconfirmed onchain transaction: Display the incoming/outgoing amount (60 sec) with orange light (until transaction is confirmed)
     
-    New incoming onchain transaction (unconfirmed): Display the incoming amount (60 sec) with orange light (until transaction is confirmed)
+    New confirmed onchain transaction: Display the incoming/outgoing amount (60 sec) with green light (flashing 3 times)
    
-    Detect changes in LND fees and update the Blockclock display accordingly.
     
 ## License
 
