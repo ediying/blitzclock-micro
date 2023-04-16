@@ -1,53 +1,54 @@
 # blitzclock-micro
 
+Short introduction or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
-This is a Python script that connects to your Bitcoin Lightning Network Daemon (LND) and retrieves data about your Lightning channels and balances. It uses that data to update a Blockclock device, which displays the current Bitcoin block height and other relevant information.
-Getting Started
+You can also add some badges/states next to Project Name, e.g,
++ [Travis CI](https://travis-ci.org/)
++ [AppVeyor](http://www.appveyor.com/)
++ [Coveralls](https://coveralls.io/)
++ [Gitter](https://gitter.im/)
++ [Shields.io](http://shields.io/)
++ Others
 
-To use this script, you'll need:
+## Features or Example
 
-    A Blockclock device
-    A Bitcoin Lightning Network Daemon (LND) node with a valid TLS certificate and Macaroon file
-    Python 3.x installed on your computer
+Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
-Installation
+## Motivation
 
-    Clone this repository to your local machine:
+A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
-bash
+## Requirements
 
-git clone https://github.com/your-username/lightning-blockclock.git
+This section is optional if there isn't any special dependencies. Else a bulletlist will suffice, e.g.,
++ [Node.js](https://nodejs.org/)
++ [React](https://facebook.github.io/react/)
++ Others
 
-    Install the required Python packages using pip:
+## Installation or Getting Started
 
-bash
+Provide code examples and explanations of how to get the project, e.g.,
 
-pip install -r requirements.txt
+	git clone https://github.com/Jasonnor/README.md.git
+    cd README.md
+    npm install README.md
+    npm start
 
-    Edit the config.py file to include your Blockclock device's IP address and API key, as well as the paths to your LND TLS certificate and Macaroon files.
+## Usage
 
-    Run the script:
+Show how to use the project or library.
+    
+## Reference
 
-bash
++ [jxson](https://gist.github.com/jxson) - [README.md](https://gist.github.com/jxson/1784669)
++ [gistfrojd](https://gist.github.com/gistfrojd) - [README.md](https://gist.github.com/gistfrojd/5fcd3b70949ac6376f66)
 
-python lightning_blockclock.py
+Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-The script will retrieve data from your LND node and update your Blockclock device accordingly.
-Features
+## Contributors
 
-This script currently supports the following features:
+Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 
-    Display the current Bitcoin block height on your Blockclock device.
-    Display the total Lightning balance, including unconfirmed funds.
-    Display the Lightning commit fees for all open channels.
-    Display the total on-chain balance, including unconfirmed funds.
-    Detect incoming and outgoing Lightning transactions and update the Blockclock display accordingly.
-    Detect changes in LND fees and update the Blockclock display accordingly.
+## License
 
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-Acknowledgments
-
-    This script was inspired by Blockclock Jr. Lightning by @21isenough.
-    Thanks to the developers of the pyln-client library for making it easy to interact with LND via Python.
+A short snippet describing the license ([MIT](http://opensource.org/licenses/mit-license.php), [Apache](http://opensource.org/licenses/Apache-2.0), etc.)
