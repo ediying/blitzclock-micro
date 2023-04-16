@@ -60,13 +60,13 @@ This script currently supports the following features:
 
     New Block: Display the current Bitcoin block height and send a tick sound.
    
-    New incoming Lightning Transaction:Display the incoming amount with a green light (5 sec).
+    New incoming Lightning Transaction:Display the incoming amount (60 sec) with a green light (5 sec).
    
-    New outgoing Lightning Transaction:Display the outgoing amount with a red light (5 sec).
+    New outgoing Lightning Transaction:Display the outgoing amount (60 sec) with a red light (5 sec).
    
-    New routed Transaction: Display the daily earned fee amount with orange light (5 sec).
+    New routed Transaction: Display the daily earned fee amount (60 sec) with orange light (5 sec).
    
-    Detect incoming and outgoing Lightning transactions and update the Blockclock display accordingly.
+    New incoming onchain transaction: Display the incoming amount (60 sec) with orange light (
    
     Detect changes in LND fees and update the Blockclock display accordingly.
     
