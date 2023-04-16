@@ -34,7 +34,7 @@ To use this script, you'll need:
    ```sh
    http://YOUR-IP-ADDRESS/display
    ``` 
-8. Set your scrren update rate to MANUAL
+8. Set your screen update rate to MANUAL
 
 9. Go back to your ssh terminal window and open the Cron-Deamon  
    ```sh
