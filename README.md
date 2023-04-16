@@ -45,8 +45,8 @@ To use this script, you'll need:
    ```sh
    */5 * * * * /usr/bin/python /home/admin/blitzclock-micro/blitzclock.py
    ``` 
-   
-11. Save the Cronjon   
+   blas
+11. Save the Cronjon  
 
 
 If you want to use a custom folder location, macaroon path or light colors you can change also change that in the config.py file
