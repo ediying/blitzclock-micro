@@ -45,7 +45,7 @@ To use this script, you'll need:
    ```sh
    */5 * * * * /usr/bin/python /home/admin/blitzclock-micro/blitzclock.py
    ``` 
-   If your to to change the update time just replace the "5" but please keep in mind that the update time should at least 2 minutes.
+   If you want to change the update time just replace the "5" but please keep in mind that the update time should at least 2 minutes.
    
 11. Save the Cronjon  
 
