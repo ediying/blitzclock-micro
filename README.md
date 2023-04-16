@@ -26,7 +26,11 @@ To use this script, you'll need:
    ```sh
    nano config.py
    ```
-5. Change the blockclock_ip to your Blockclock micro IP 
+5. Change the blockclock_ip to your Blockclock micro IP address
+
+6. Save the config.py file
+
+7.  
    
 
 
