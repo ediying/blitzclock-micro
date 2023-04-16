@@ -47,7 +47,7 @@ To use this script, you'll need:
    ``` 
    If you want to change the update time just replace the "5" but please keep in mind that the update time should at least 2 minutes.
    
-11. Save the Cronjon  
+11. Save the Cronjob  
 
 
 If you want to use a custom folder location, macaroon path or light colors you can change also change that in the config.py file
