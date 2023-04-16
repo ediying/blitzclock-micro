@@ -6,20 +6,9 @@ This is a Python script that connects to your Bitcoin Lightning Network Daemon (
 
 To use this script, you'll need:
 
-+ A Blockclock device
-    A Bitcoin Lightning Network Daemon (LND) node with a valid TLS certificate and Macaroon file
-    Python 3.x installed on your computer
++ [A Raspiblitz Fullnode with LND running](https://github.com/rootzoll/raspiblitz)
++ [Blockclock Micro](https://blockclockmicro.com)
 
-## Motivation
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
-
-## Requirements
-
-This section is optional if there isn't any special dependencies. Else a bulletlist will suffice, e.g.,
-+ [Node.js](https://nodejs.org/)
-+ [React](https://facebook.github.io/react/)
-+ Others
 
 ## Installation or Getting Started
 
