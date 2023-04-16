@@ -4,10 +4,7 @@ Short introduction or overview that explains **what** the project is. This descr
 
 You can also add some badges/states next to Project Name, e.g,
 + [Travis CI](https://travis-ci.org/)
-+ [AppVeyor](http://www.appveyor.com/)
-+ [Coveralls](https://coveralls.io/)
-+ [Gitter](https://gitter.im/)
-+ [Shields.io](http://shields.io/)
+
 + Others
 
 ## Features or Example
@@ -51,4 +48,4 @@ Let people know how they can dive into the project, include important links to t
 
 ## License
 
-A short snippet describing the license ([MIT](http://opensource.org/licenses/mit-license.php), [Apache](http://opensource.org/licenses/Apache-2.0), etc.)
+A short snippet describing the license ([MIT](http://opensource.org/licenses/mit-license.php)
