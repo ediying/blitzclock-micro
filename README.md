@@ -12,7 +12,8 @@ To use this script, you'll need:
 
 ## Getting Started
 
-1.open an ssh connection to your raspiblitz
+1. Open an ssh connection to your raspiblitz
+
 2. Clone the repo to your /home/admin folder
    ```sh
    git clone https://github.com/ediying/blitzclock-micro
