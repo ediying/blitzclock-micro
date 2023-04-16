@@ -64,7 +64,7 @@ This script currently supports the following features:
    
     New outgoing Lightning Transaction:Display the outgoing amount with a red light (5 sec).
    
-    New routed Transaction: Display the daily earned fee amount with orange light (sec).
+    New routed Transaction: Display the daily earned fee amount with orange light (5 sec).
    
     Detect incoming and outgoing Lightning transactions and update the Blockclock display accordingly.
    
