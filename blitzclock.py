@@ -154,7 +154,7 @@ if  int(totalBalance) == int(confirmedBalance) and blockchainData['Unconfirmed O
     url = base_url_text + str(totalBalance)
     print(url)
     print('/n')
-    r = requests.get(url, 'tl=Unconfirmed outgoing satoshis') # Making a GET request
+    r = requests.get(url, 'tl=transaction confirmed') # Making a GET request
     printRequest()
     for i in range(3):
         r  = requests.get(send_light_on + light_color_green)
