@@ -4,7 +4,11 @@ This is a Python script that connects to your Bitcoin Lightning Network Daemon (
 
 ## Getting Started
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+To use this script, you'll need:
+
++ A Blockclock device
+    A Bitcoin Lightning Network Daemon (LND) node with a valid TLS certificate and Macaroon file
+    Python 3.x installed on your computer
 
 ## Motivation
 
