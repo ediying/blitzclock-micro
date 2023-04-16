@@ -70,6 +70,9 @@ This script currently supports the following features:
     
     New confirmed onchain transaction: Display the incoming/outgoing amount (60 sec) with green light (flashing 3 times)
    
+##Donations
+
+If you like this little fun project please feel free to send some U+2764 &  	U+26A1 	
     
 ## License
 
