@@ -22,12 +22,13 @@ To use this script, you'll need:
    ```sh
    cd blitzclock-micro
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Open the config.py file
+   ```sh
+   nano config.py
    ```
+5. Change the blockclock_ip to your Blockclock micro IP 
+   
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Features
 
