@@ -30,16 +30,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-Provide code examples and explanations of how to get the project, e.g.,
-
-	git clone https://github.com/Jasonnor/README.md.git
-    cd README.md
-    npm install README.md
-    npm start
-
-## Usage
+## Features
 
 Show how to use the project or library.
     
