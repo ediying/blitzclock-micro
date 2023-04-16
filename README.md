@@ -1,5 +1,6 @@
 # blitzclock-micro
 
+
 This is a Python script that connects your Raspiblitz Fullnode (LND) to a Blockclock micro and retrieves data about your Node. It uses that data to update a Blockclock micro, which displays the current Bitcoin block height, unconfirmed onchain transactions, lightning transactions and other relevant information. The update is performed every 5 minutes by a cronjob.
 
 ## Getting Started
@@ -50,9 +51,8 @@ To use this script, you'll need:
 11. Save the Cronjob  
 
 
-If you want to use a custom folder location, macaroon path or light colors you can change also change that in the config.py file
+If you want to use a custom folder location, macaroon path or light colors you can also change that in the config.py file
    
-
 
 ## Features
 
@@ -70,7 +70,8 @@ This script currently supports the following features:
     
     New confirmed onchain transaction: Display the incoming/outgoing amount (60 sec) with green light (flashing 3 times)
    
-##Donations
+   
+## Donations
 
 If you like this little fun project please feel free to send some ❤️&⚡
 
@@ -81,6 +82,7 @@ LNURL: lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h
 Lightning Address: aliencreator25@walletofsatoshi.com
 
 Find me on nostr: npub1ddwsgs3k0cvmzgvyru626wt6kgpvtx6yu8y7xljhxw622dghy08qkls259
+
 
 ## License
 
