@@ -84,8 +84,8 @@ getData("channels") # Lightning channels query
 getData("balance/channels") # Lightning balance query
 
 # Incoming Transaction 
-if  int(lightningBalance) - commitFeesSum > int(blockchainData['Lightning Balance']) - blockchainData['Lightning Commit Fees Sum']:
-    lightningAmount = (int(lightningBalance) - commitFeesSum) - (int(blockchainData['Lightning Balance']) - blockchainData['Lightning Commit Fees Sum'])
+if  int(lightningBalance) + commitFeesSum > int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']:
+    lightningAmount = (int(lightningBalance) + commitFeesSum) - (int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum'])
     # Write Lightning Balance in dict
     blockchainData['Lightning Balance'] = lightningBalance
     blockchainData['Lightning Commit Fees Sum'] = commitFeesSum
@@ -104,8 +104,8 @@ if  int(lightningBalance) - commitFeesSum > int(blockchainData['Lightning Balanc
     blockchainData['Screen Blockcount'] = False
 
 # Outgoing Transaction 
-elif int(lightningBalance) - commitFeesSum < int(blockchainData['Lightning Balance']) - blockchainData['Lightning Commit Fees Sum']:
-    lightningAmount = (int(blockchainData['Lightning Balance']) - blockchainData['Lightning Commit Fees Sum']) - (int(lightningBalance) - commitFeesSum) 
+elif int(lightningBalance) + commitFeesSum < int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']:
+    lightningAmount = (int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']) - (int(lightningBalance) + commitFeesSum) 
     # Write Lightning Balance in dict
     blockchainData['Lightning Balance'] = lightningBalance
     blockchainData['Lightning Commit Fees Sum'] = commitFeesSum
