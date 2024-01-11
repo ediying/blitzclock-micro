@@ -86,10 +86,6 @@ getData("balance/channels") # Lightning balance query
 # Incoming Transaction 
 if  int(lightningBalance) + commitFeesSum > int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']:
     lightningAmount = (int(lightningBalance) + commitFeesSum) - (int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum'])
-    # Write Lightning Balance in dict
-    blockchainData['Lightning Balance'] = lightningBalance
-    blockchainData['Lightning Commit Fees Sum'] = commitFeesSum
-    # Send Balance to Blockclock
     url = base_url_text + str('-') + str(lightningAmount)
     print(url)
     print('/n')
@@ -104,12 +100,8 @@ if  int(lightningBalance) + commitFeesSum > int(blockchainData['Lightning Balanc
     blockchainData['Screen Blockcount'] = False
 
 # Outgoing Transaction 
-elif int(lightningBalance) + commitFeesSum < int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']:
+elif  int(lightningBalance) + commitFeesSum < int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']:
     lightningAmount = (int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']) - (int(lightningBalance) + commitFeesSum) 
-    # Write Lightning Balance in dict
-    blockchainData['Lightning Balance'] = lightningBalance
-    blockchainData['Lightning Commit Fees Sum'] = commitFeesSum
-    # Send Balance to Blockclock
     url = base_url_text + str('-') + str(lightningAmount)
     print(url)
     print('/n')
@@ -123,6 +115,9 @@ elif int(lightningBalance) + commitFeesSum < int(blockchainData['Lightning Balan
         r  = requests.get(send_light_off)
     blockchainData['Screen Blockcount'] = False
 
+# Write Lightning Balance in dict
+blockchainData['Lightning Balance'] = lightningBalance
+blockchainData['Lightning Commit Fees Sum'] = commitFeesSum
 
 getData("fees") # Lnd fee query
 
