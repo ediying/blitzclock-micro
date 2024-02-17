@@ -15,8 +15,6 @@ confirmedBalance= 0
 totalBalance= 0
 totalSatoshisSent= 0
 miningBalance= 0
-miningAdress= 'bc...'
-halvingInterval = 210000
 
 
 def getData(lndRequest):
