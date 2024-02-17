@@ -15,7 +15,7 @@ confirmedBalance= 0
 totalBalance= 0
 totalSatoshisSent= 0
 miningBalance= 0
-miningAdress= 'bc1qcx9wurgkat8s9msz9v3clh6apmx7sy65rp9mws'
+miningAdress= 'bc...'
 halvingInterval = 210000
 
 
