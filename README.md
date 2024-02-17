@@ -59,6 +59,8 @@ If you want to use a custom folder location, macaroon path or light colors you c
 This script currently supports the following features:
 
     New Block: Display the current Bitcoin block height and send a tick sound.
+
+    Halving Block: Display the current Bitcoin block height and send a tick sound with color changing light (10 times) 
    
     New incoming Lightning Transaction:Display the incoming amount (60 sec) with a green light (5 sec).
    
@@ -69,6 +71,9 @@ This script currently supports the following features:
     New unconfirmed onchain transaction: Display the incoming/outgoing amount (60 sec) with orange light (until transaction is confirmed)
     
     New confirmed onchain transaction: Display the incoming/outgoing amount (60 sec) with green light (flashing 3 times)
+
+    New mining adress balance: Display the adress amount (60sec) with blue light (flashing 10 times)
+
    
    
 ## Donations
