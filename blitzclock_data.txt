@@ -1,15 +1,16 @@
 {
-    "Blockcount": 0,
+    "Blockcount": 830834,
     "Fee Day": "0",
     "Fee Week": 0,
     "Fee Month": 0,
     "Unconfirmed Onchain Balance": 0,
-    "Confirmed Onchain Balance": "0",
+    "Confirmed Onchain Balance": "10000",
     "Unconfirmed Onchain Transaction": false,
-    "Total Onchain Balance": "0",
-    "Lightning Balance": "0",
-    "Lightning Commit Fees Sum": 0,
-    "Screen Blockcount": true
+    "Total Onchain Balance": "10000",
+    "Total Satoshis sent": 2562032,
+    "Total Satoshis received": 879621,
+    "Screen Blockcount": true,
+    "Mining Balance": 0
 }
 
 
