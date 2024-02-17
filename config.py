@@ -1,8 +1,7 @@
 
 
-folder_location = '/home/admin/blitzclock-micro/'
-blockclock_ip = 'YOUR BLOCKCLOCK MICRO IP'
-
+folder_location = '/home/admin/blockclock.micro/'
+blockclock_ip = '192.168.178.68'
 tls_cert_path = '/mnt/hdd/lnd/tls.cert'
 macaroon_path = '/mnt/hdd/app-data/lnd/data/chain/bitcoin/mainnet/admin.macaroon'
 
@@ -14,3 +13,6 @@ light_color_orange = 'FD9100'
 light_color_blue = '0000FF'
 light_color_green = '2FF500'
 light_color_red = 'fd1100'
+
+miningAdress= ''
+halvingInterval = 210000
