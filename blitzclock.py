@@ -13,8 +13,10 @@ feeMonth= 0
 unconfirmedBalance= 0
 confirmedBalance= 0
 totalBalance= 0
-lightningBalance= 0
-commitFeesSum= 0
+totalSatoshisSent= 0
+miningBalance= 0
+miningAdress= 'bc1qcx9wurgkat8s9msz9v3clh6apmx7sy65rp9mws'
+halvingInterval = 210000
 
 
 def getData(lndRequest):
@@ -26,8 +28,8 @@ def getData(lndRequest):
     global unconfirmedBalance
     global confirmedBalance
     global totalBalance
-    global lightningBalance
-    global commitFeesSum
+    global totalSatoshisSent
+    global totalSatoshisReceived
 
     url = f'https://localhost:8080/v1/{lndRequest}'
     cert_path = tls_cert_path
@@ -39,20 +41,17 @@ def getData(lndRequest):
     print('/n')
 
     if lndRequest == 'channels':
-        dict = str(r.json())
-        # Remove characters from string
+        dict_str = str(r.json())
+        # Remove unwanted characters from the string
         for x in range(len("[]{}'")):
-            dict = dict.replace("[]{}'"[x],"")
-        # Split string to list and add up commit fee    
-        dict= dict.split(', ')
-        commitFees = [s for s in dict if "commit_fee" in s]
-        x = 0
-        while x < len(commitFees):
-            commitFees[x] = commitFees[x].strip('commit_fee: ')
-            x = x + 1   
-        commitFees = list(map(int, commitFees))
-        commitFeesSum = sum(commitFees)
-        
+            dict_str = dict_str.replace("[]{}'"[x], "")
+        # Split the string into a list and sum up total satoshis sent
+        dict_list = dict_str.split(', ')
+        totalSatoshisSent = [int(s.strip('total_satoshis_sent: ')) for s in dict_list if "total_satoshis_sent" in s]
+        totalSatoshisSent = sum(totalSatoshisSent)
+        totalSatoshisReceived = [int(s.strip('total_satoshis_received: ')) for s in dict_list if "total_satoshis_received" in s]
+        totalSatoshisReceived  = sum(totalSatoshisReceived)
+
     dict = r.json()
     
     blockcount = dict.get("block_height")
@@ -62,14 +61,12 @@ def getData(lndRequest):
     unconfirmedBalance = dict.get("unconfirmed_balance")
     confirmedBalance = dict.get("confirmed_balance")
     totalBalance = dict.get("total_balance")
-    lightningBalance = dict.get("balance")
    
 
 def printRequest():
     print(r)  # Check status code for response received  (success code - 200)
     print(r.content)  # Print content of request
     print('/n')
-        
 
 
 # Load Blockchain Data .txt and put it in a dict
@@ -81,11 +78,13 @@ print('/n')
 
 
 getData("channels") # Lightning channels query
-getData("balance/channels") # Lightning balance query
 
 # Incoming Transaction 
-if  int(lightningBalance) + commitFeesSum > int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']:
-    lightningAmount = (int(lightningBalance) + commitFeesSum) - (int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum'])
+if  int(totalSatoshisReceived) > int(blockchainData['Total Satoshis received']):
+    lightningAmount = (int(totalSatoshisReceived)) - (int(blockchainData['Total Satoshis received']))
+    # Write Lightning Balance in dict
+    blockchainData['Total Satoshis received'] = totalSatoshisReceived
+    # Send Balance to Blockclock
     url = base_url_text + str('-') + str(lightningAmount)
     print(url)
     print('/n')
@@ -100,8 +99,11 @@ if  int(lightningBalance) + commitFeesSum > int(blockchainData['Lightning Balanc
     blockchainData['Screen Blockcount'] = False
 
 # Outgoing Transaction 
-elif  int(lightningBalance) + commitFeesSum < int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']:
-    lightningAmount = (int(blockchainData['Lightning Balance']) + blockchainData['Lightning Commit Fees Sum']) - (int(lightningBalance) + commitFeesSum) 
+elif  int(totalSatoshisSent) > int(blockchainData['Total Satoshis sent']):
+    lightningAmount = (int(totalSatoshisSent)) - (int(blockchainData['Total Satoshis sent']))
+    # Write Lightning Balance in dict
+    blockchainData['Total Satoshis sent'] = totalSatoshisSent
+    # Send Balance to Blockclock
     url = base_url_text + str('-') + str(lightningAmount)
     print(url)
     print('/n')
@@ -115,9 +117,6 @@ elif  int(lightningBalance) + commitFeesSum < int(blockchainData['Lightning Bala
         r  = requests.get(send_light_off)
     blockchainData['Screen Blockcount'] = False
 
-# Write Lightning Balance in dict
-blockchainData['Lightning Balance'] = lightningBalance
-blockchainData['Lightning Commit Fees Sum'] = commitFeesSum
 
 getData("fees") # Lnd fee query
 
@@ -183,28 +182,56 @@ elif  int(totalBalance) < int(blockchainData['Total Onchain Balance']):
     blockchainData['Screen Blockcount'] = False
 
 
+#RPC Bitcoinexplorer check mining adress balance
+url = f'https://192.168.178.46:3021/api/address/{miningAdress}'
+response = requests.get(url, verify=False)
+data = json.loads(response.text)   
+balance_sat = data.get("txHistory", {}).get("balanceSat", None)
+miningBalance = balance_sat
+print(miningBalance)
+
+
 getData("getinfo") # Blockcount query
 
 # Show Blockcount
-if blockchainData['Screen Blockcount'] == False:
+if  blockchainData['Screen Blockcount'] == False:
     time.sleep(61)
-    # Send Blockheight to Blockclock
-    url = base_url_text + str(blockcount)
+    
+if  int(miningBalance) > int(blockchainData['Mining Balance']):
+    blockchainData['Mining Balance'] = miningBalance
+    # Send Mining Balance to Blockcklock
+    url = base_url_text + str(miningBalance)
     print(url)
     print('/n')
-    r = requests.get(url, 'tl=Number of blocks in the blockchain') # Making a GET request
+    r = requests.get(url, 'tl=satoshis mined') # Making a GET request
+    printRequest()
+    for i in range(10):
+        r  = requests.get(send_light_on + light_color_blue)
+        r  = requests.get(send_light_off)
+    time.sleep(61)
+    
+# Send Blockheight to Blockclock
+url = base_url_text + str(blockcount)
+print(url)
+print('/n')
+
+if blockcount % halvingInterval == 0:
+    r = requests.get(url, 'tl=Halving!') # Making a GET request
     printRequest()
     blockchainData['Screen Blockcount'] = True
+    light_colors = [light_color_green, light_color_red, light_color_blue, light_color_orange]
+    for _ in range(10):
+        for color in light_colors:
+            r = requests.get(send_light_on + color)
+    r = requests.get(send_light_off)
 
+r = requests.get(url, 'tl=Number of blocks in the blockchain') # Making a GET request
+printRequest()
+blockchainData['Screen Blockcount'] = True
+    
 if  blockcount != blockchainData['Blockcount']:
     # Write blockcount in dict
     blockchainData['Blockcount'] = blockcount
-    # Send Blockheight to Blockclock
-    url = base_url_text + str(blockcount)
-    print(url)
-    print('/n')
-    r = requests.get(url, 'tl=Number of blocks in the blockchain') # Making a GET request
-    printRequest()
     r = requests.get(send_tick_sound) # Making a GET request
     blockchainData['Screen Blockcount'] = True
 
